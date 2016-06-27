@@ -36,19 +36,6 @@ input, .studentsList-row {
   color: blue;
 }
 
-.newStudent {
-  margin:10px 0px;
-  border:1px solid black;
-  padding: 5px;
-}
-
-.newStudent-submit {
-  padding:5px;
-  background: black;
-  color: white;
-  margin: 5px 0px;
-}
-
 .button {
   cursor: pointer;
 }
@@ -102,7 +89,7 @@ body {
 }
 
 .angular-google-map-container {
-  height: 800px;
+  height: 100%;
   width: Calc( 100% - 501px );
   float: left;
 
