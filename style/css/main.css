@@ -1,0 +1,53 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    width: 200%;
+    overflow: hidden;
+}
+.mainScreen{
+  height: 100%;
+  width: 25%;
+  background-size: cover;
+  background: url(../images/train.png)no-repeat left;
+  transition: all 1s ease;
+  float: left;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 400px;
+}
+.inner:hover{
+  cursor:pointer;
+}
+.yellow{
+  height: 10px;
+  width: 400px;
+  background-color: yellow;
+}
+.nspage{
+  height: 100%;
+  margin: 0;
+  width: 25%;
+  background-color: white;
+  float:left;
+  transition: all 1s ease;
+}
+.hidden{
+  margin-left: -25%;
+  /*opacity: 0;*/
+}

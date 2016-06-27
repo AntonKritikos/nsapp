@@ -1,0 +1,109 @@
+input, .studentsList-row {
+  width:500px;
+  padding:5px;
+  box-sizing: border-box;
+}
+
+.studentsList {
+  margin: 0px 0px;
+}
+
+.studentsList-row {
+  color:black;
+  background: lightgray;
+  border-bottom: 1px dashed black;
+  width: 500px;
+}
+
+.studentsList-row.ng-leave.ng-leave-active,
+.studentsList-row.ng-move,
+.studentsList-row.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.studentsList-row.ng-leave,
+.studentsList-row.ng-move.ng-move-active,
+.studentsList-row.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:30px;
+}
+
+.studentsList-row.active {
+  width: 450px;
+  margin-left: 50px;
+  background: orange;
+  color: blue;
+}
+
+.newStudent {
+  margin:10px 0px;
+  border:1px solid black;
+  padding: 5px;
+}
+
+.newStudent-submit {
+  padding:5px;
+  background: black;
+  color: white;
+  margin: 5px 0px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.search{
+    width: Calc(100% - 501px);
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.students{
+  height: 100%;
+  width: 500px;
+  float: left;
+  overflow-x: hidden;
+  border-right: black 1px solid
+}
+
+.studentDetails {
+  float: right;
+  width: Calc(100% - 511px);
+  height:100px;
+  border-top:1px solid black;
+  padding:5px;
+}
+
+.studentDetails.ng-enter,
+.studentDetails.ng-leave.ng-leave-active {
+  opacity:0;
+  -ms-transform: scale(0.95); /* IE 9 */
+  -webkit-transform: scale(0.95); /* Safari */
+  transform: scale(0.95);
+}
+
+.studentDetails.ng-leave,
+.studentDetails.ng-enter.ng-enter-active {
+  opacity:1;
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1); /* Safari */
+  transform: scale(1);
+}
+
+.animatedCSS {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.angular-google-map-container {
+  height: 800px;
+  width: Calc( 100% - 501px );
+  float: left;
+
+}
