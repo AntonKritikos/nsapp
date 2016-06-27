@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="md2App">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+    <title>nsapp</title>
+    <link rel="stylesheet" href="style/css/default.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href="style/css/main.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="mainScreen">
+      <div class="outer">
+        <div class="middle">
+          <div class="inner">
+            <img class="start" src="style/images/button.png" alt="Something went wrong" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="studentsList nspage" ng-controller="StudentsController as students">
+
+
+      <input type="text" placeholder="Doorzoek de lijst" ng-model="students.searchQuery" class="search">
+            <div class="students">
+
+                <!-- <div ng-click="students.searchQuery='cee'"></div> -->
+                <div class="studentsList-row animatedCSS" ng-class="{active:students.currentStudent==currentStudent}" ng-click="students.setStudent(currentStudent)" ng-repeat="currentStudent in students.allStudents | filter:students.searchQuery">
+                    {{currentStudent.name}}
+                </div>
+            </div>
+            <!--googlemaps-->
+            <ui-gmap-google-map center='students.map.center' zoom='students.map.zoom'></ui-gmap-google-map>
+
+        <!--googlemaps-->
+            <div id="gmaps">
+                <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+            </div>
+            <div class="studentDetails animatedCSS" ng-if="students.currentStudent">
+                <div>De geselecteerde student is: {{students.currentStudent.name}}</div>
+            </div>
+
+    </div>
+    <!--googlemaps-->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/students.controller.js"></script>
+    <script src="app/controllers/animation.controller.js"></script>
+    <script src='node_modules/lodash/lodash.js'></script>
+    <script src='lib/angular-simple-logger.js'></script>
+    <script src='lib/angular-google-maps.js'></script>
+  </body>
+</html>
