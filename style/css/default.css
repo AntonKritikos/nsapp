@@ -89,8 +89,8 @@ body {
 }
 
 .angular-google-map-container {
-  height: 100%;
-  width: Calc( 100% - 501px );
+  height: 800px;
+  width: Calc(100% - 501px);
   float: left;
 
 }

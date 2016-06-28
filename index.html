@@ -31,10 +31,9 @@
             </div>
             <!--googlemaps-->
             <ui-gmap-google-map center='students.map.center' zoom='students.map.zoom'></ui-gmap-google-map>
-
-        <!--googlemaps-->
-            <div id="gmaps">
-                <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+            
+            <div class="studentDetails animatedCSS" ng-if="students.currentStudent">
+                <div>De geselecteerde student is: {{students.currentStudent.name}}</div>
             </div>
 
     </div>
@@ -47,5 +46,6 @@
     <script src='node_modules/lodash/lodash.js'></script>
     <script src='lib/angular-simple-logger.js'></script>
     <script src='lib/angular-google-maps.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU5zn-EKewTgIAClpMDjHSOYKkUUZZigI" type="text/javascript"></script>
   </body>
 </html>
